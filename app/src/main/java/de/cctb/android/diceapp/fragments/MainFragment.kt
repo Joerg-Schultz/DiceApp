@@ -7,6 +7,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.activityViewModels
+import androidx.navigation.findNavController
 import de.cctb.android.diceapp.R
 import de.cctb.android.diceapp.databinding.MainFragmentBinding
 import de.cctb.android.diceapp.viewmodels.MainViewModel
@@ -43,6 +44,11 @@ class MainFragment : Fragment() {
         binding.btnThrow.setOnClickListener {
             viewModel.throwDice()
             binding.tvNumber.text = viewModel.currentNumber.toString()
+        }
+
+        // On button click move to history fragment
+        binding.btnHistory.setOnClickListener {
+            view.findNavController().navigate(R.id.action_mainFragment_to_historyFragment)
         }
     }
 
