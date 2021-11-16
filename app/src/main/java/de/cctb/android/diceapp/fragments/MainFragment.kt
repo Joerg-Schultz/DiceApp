@@ -6,6 +6,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.activityViewModels
 import de.cctb.android.diceapp.R
 import de.cctb.android.diceapp.databinding.MainFragmentBinding
 import de.cctb.android.diceapp.viewmodels.MainViewModel
@@ -15,13 +16,15 @@ class MainFragment : Fragment() {
 
     private var _binding: MainFragmentBinding? = null
     // This property is only valid between onCreateView and
-// onDestroyView.
+    // onDestroyView.
     private val binding get() = _binding!!
+
+
     companion object {
         fun newInstance() = MainFragment()
     }
 
-    private lateinit var viewModel: MainViewModel
+    private val viewModel: MainViewModel by activityViewModels()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -34,9 +37,12 @@ class MainFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        binding.tvNumber.text = viewModel.currentNumber.toString()
+
+        // On button click throw dice and show the new value
         binding.btnThrow.setOnClickListener {
-            //https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.random/next-int.html
-            binding.tvNumber.text = Random.nextInt(1,6).toString()
+            viewModel.throwDice()
+            binding.tvNumber.text = viewModel.currentNumber.toString()
         }
     }
 
