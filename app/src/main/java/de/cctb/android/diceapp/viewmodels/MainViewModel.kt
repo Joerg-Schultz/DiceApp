@@ -1,15 +1,17 @@
 package de.cctb.android.diceapp.viewmodels
 
 import androidx.lifecycle.ViewModel
+import de.cctb.android.diceapp.models.Dice
 import kotlin.random.Random
 
 class MainViewModel : ViewModel() {
-    var currentNumber = 0
+    var dice = Dice()
+    var currentValue = dice.currentValue ?: 0
     var history = mutableListOf<Int>()
 
-    //https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.random/next-int.html
-    fun throwDice() {
-        currentNumber = Random.nextInt(1,6)
-        history.add(currentNumber)
+    fun rollDice() {
+        dice.roll()
+        currentValue = dice.currentValue ?: 0
+        history.add(currentValue)
     }
 }

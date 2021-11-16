@@ -38,12 +38,12 @@ class MainFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        binding.tvNumber.text = viewModel.currentNumber.toString()
+        binding.tvNumber.text = viewModel.currentValue.toString()
 
         // On button click throw dice and show the new value
         binding.btnThrow.setOnClickListener {
-            viewModel.throwDice()
-            binding.tvNumber.text = viewModel.currentNumber.toString()
+            viewModel.rollDice()
+            binding.tvNumber.text = viewModel.currentValue.toString()
         }
 
         // On button click move to history fragment
