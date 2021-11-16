@@ -9,13 +9,26 @@
         tools:context=".fragments.MainFragment">
 
     <TextView
-            android:id="@+id/message"
+            android:id="@+id/tv_number"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="MainFragment"
+            android:text="0"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"/>
+            app:layout_constraintTop_toTopOf="parent"
+            android:textAppearance="@style/TextAppearance.AppCompat.Display2"/>
+    <Button
+            android:text="Throw"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:id="@+id/btn_throw"
+            app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginBottom="16dp" android:layout_marginStart="16dp"/>
+    <Button
+            android:text="History"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:id="@+id/btn_history"
+            app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginBottom="16dp" android:layout_marginEnd="16dp"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
