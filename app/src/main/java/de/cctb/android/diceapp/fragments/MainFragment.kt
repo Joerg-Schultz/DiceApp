@@ -9,6 +9,7 @@ import android.view.ViewGroup
 import de.cctb.android.diceapp.R
 import de.cctb.android.diceapp.databinding.MainFragmentBinding
 import de.cctb.android.diceapp.viewmodels.MainViewModel
+import kotlin.random.Random
 
 class MainFragment : Fragment() {
 
@@ -33,6 +34,10 @@ class MainFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        binding.btnThrow.setOnClickListener {
+            //https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.random/next-int.html
+            binding.tvNumber.text = Random.nextInt(1,6).toString()
+        }
     }
 
     override fun onDestroyView() {
