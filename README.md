@@ -1,5 +1,9 @@
 # DiceApp
 App for teaching basic concepts 
+
+https://user-images.githubusercontent.com/35415909/142154738-d9624242-71ae-4da8-8e46-39c619d09393.mp4
+
+
 ## Kotlin
 - val vs var
 - data types incl. nullability
