@@ -3,6 +3,10 @@ App for teaching basic concepts
 <video src="https://user-images.githubusercontent.com/35415909/142154738-d9624242-71ae-4da8-8e46-39c619d09393.mp4" width=90/>
 
 
+https://user-images.githubusercontent.com/35415909/142157428-c0cf6ce7-cc15-4e84-8133-8909b1f127d0.mp4
+
+
+
 ## Kotlin
 - val vs var
 - data types incl. nullability
