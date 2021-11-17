@@ -1,8 +1,7 @@
 # DiceApp
 App for teaching basic concepts 
-<video controls width="240" height="320" >
-<source src="https://user-images.githubusercontent.com/35415909/142154738-d9624242-71ae-4da8-8e46-39c619d09393.mp4">
-</video>
+<video src="https://user-images.githubusercontent.com/35415909/142154738-d9624242-71ae-4da8-8e46-39c619d09393.mp4" width=180/>
+
 
 ## Kotlin
 - val vs var
