@@ -13,6 +13,14 @@ App for teaching basic concepts
 - XML based Layout (might change to compose)
 
 ## Possible extensions
+
+### Use FlowState
+Collect the state of a dice using flows instead of reading a variable from the viewmodel
+New concepts:
+- Flow
+- StateFlow
+- SharedFlow
+
 ### Choose number of sides via Start page
 Generate a start page which asks for the number of sides of the dice.
 New concepts:
